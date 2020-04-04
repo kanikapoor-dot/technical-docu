@@ -1,0 +1,263 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>
+           <h4>
+               CSS Documentation
+            </h4>
+        </header>
+        <ul>
+            <li>
+                <a class="nav-link" href="#Introduction">
+                    Introduction
+                </a>
+            </li>
+            <li>
+                <a class="nav-link" href="#width_and_max-width">
+                    Width and Max-width
+                </a>
+            </li>
+            <li>
+                <a class="nav-link" href="#The_position_Property">
+                    The Position Property
+                </a>
+            </li>
+            <li>
+                <a class="nav-link" href="#overflow">
+                    Overflow
+                </a>
+            </li>
+            <li>
+                <a class="nav-link" href="#opacity">
+                    Opacity
+                </a>
+            </li>
+
+        </ul>
+        
+
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>
+               <h1>Introduction </h1>
+            </header>
+            <h3>
+                What is CSS ?
+            </h3>
+            <ul>
+                <li>
+                    CSS stands for Cascading Style Sheets                    
+                </li>
+                <li>
+                    CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+                </li>
+                <li>
+                    CSS saves a lot of work. It can control the layout of multiple web pages all at once
+                </li>
+                <li>
+                    External stylesheets are stored in CSS files
+                </li>
+            </ul>
+            <h4>
+                CSS Example
+            </h4>
+            <code>
+                <pre>
+                body {
+                    background-color: lightblue;
+                  }
+
+                h1 {
+                    color: white;
+                    text-align: center;
+                  }
+                <pre>
+            </code>
+        </section>
+        <section class="main-section" id="width_and_max-width">
+            <header>
+               <h1>Width and Max-width</h1>
+            </header>
+            <p> 
+                As mentioned in the previous chapter; a block-level 
+                element always takes up the full width available 
+                (stretches out to the left and right as far as it can). <br>
+
+                Setting the width of a block-level element will prevent 
+                it from stretching out to the edges of its container. 
+                Then, you can set the margins to auto, to horizontally 
+                center the element within its container. The element will 
+                take up the specified width, and the remaining space will be
+                 split equally between the two margins.
+
+            </p>
+            <p>
+                Using max-width instead, in this situation, will improve the 
+                browser's handling of small windows.This is important 
+                when making a site usable on small devices.
+            </p>
+            <ul>
+                <li>
+                    <strong>Note: </strong>
+                    <p>
+                        The problem with the &lt;div&gt; above occurs when 
+                        the browser window is smaller than the width of the element. 
+                        The browser then adds a horizontal scrollbar to the page.
+                    </p>
+                </li>
+                <li>
+                    <strong>Tip:</strong>
+                    <p>Resize the browser window to less than 500px wide, to
+                     see the difference between the two divs!</p>
+                </li>
+            </ul>
+            <h4>
+                CSS Example
+            </h4>
+            <code>
+                <pre>
+                    div.ex1 {
+                        width: 500px;
+                        margin: auto;
+                        border: 3px solid #73AD21;
+                    }
+                      
+                    div.ex2 {
+                        max-width: 500px;
+                        margin: auto;
+                        border: 3px solid #73AD21;
+                    }
+                <pre>
+            </code>
+        </section>
+        <section class="main-section" id="The_position_Property">
+            
+
+            <header>
+                <h1>The Position Property</h1>
+             </header>
+             <p>
+                The position property specifies the type of positioning method used for an element.
+                <br>
+                There are five different position values:
+             </p>
+             <ul>
+                 <li>
+                      static
+                 </li>
+                 <li>
+                    relative
+                 </li>
+                 <li>
+                     fixed
+                 </li>
+                 <li>
+                     absolute
+                 </li>
+                 <li>
+                     sticky
+                 </li>
+             </ul>
+             <h4>
+                 CSS Example
+             </h4>
+             <code>
+                 <pre>
+                    div.relative {
+                        position: relative;
+                        width: 400px;
+                        height: 200px;
+                        border: 3px solid #73AD21;
+                    }
+                      
+                    div.absolute {
+                        position: absolute;
+                        top: 80px;
+                        right: 0;
+                        width: 200px;
+                        height: 100px;
+                        border: 3px solid #73AD21;
+                      }
+                 <pre>
+             </code>
+
+        </section>
+        <section class="main-section" id="overflow">
+            <header>
+                <h1>Overflow</h1>
+            </header>
+            <p>
+                The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
+                <br>
+                The overflow property has the following values:
+            </p>
+            <ul>
+                <li>
+                   <strong>visible</strong> - Default. The overflow is not clipped. The content renders outside the element's box
+                </li>
+                <li> 
+                    <strong>hidden</strong> - The overflow is clipped, and the rest of the content will be invisible
+                </li>
+                <li> 
+                    <strong>scroll</strong> - The overflow is clipped, and a scrollbar is added to see the rest of the content
+                </li>
+                <li>
+                   <strong>auto</strong> - Similar to scroll, but it adds scrollbars only when necessary
+                </li>
+            </ul>
+            <h4>
+                CSS Example
+            </h4>
+            <code>
+                <pre>
+                    div {
+                        width: 200px;
+                        height: 50px;
+                        background-color: #eee;
+                        overflow: visible;
+                      }
+                </pre>
+            </code>
+        </section>
+        <section class="main-section" id="opacity">
+            <header>
+                <h1>Opacity</h1>
+            </header>
+            <p> 
+                The opacity property can take a value from 
+                0.0 - 1.0. The lower value, the more transparent  
+            </p>
+            <code>
+                <pre>
+                    div.background {
+                        background: url(klematis.jpg) repeat;
+                        border: 2px solid black;
+                    }
+                      
+                    div.transbox {
+                        margin: 30px;
+                        background-color: #ffffff;
+                        border: 1px solid black;
+                        opacity: 0.6;
+                    }
+                      
+                    div.transbox p {
+                        margin: 5%;
+                        font-weight: bold;
+                        color: #000000;
+                    }
+                </pre>
+            </code>
+        </section>
+    </main>
+    
+</body>
+</html>
